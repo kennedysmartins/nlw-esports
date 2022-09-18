@@ -35,7 +35,7 @@ app.post('/games/:id/ads', async (request, response) => {
     return response.json([ad]);
 })
 
-app.get('/games', async (resquest, response) => {
+app.get('/games', async (request, response) => {
     const games = await prisma.game.findMany({
         include: {
             _count: {
